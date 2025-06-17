@@ -1,0 +1,8 @@
+#include "wasm/WasmContext.cpp"
+#include "wasm/WasmFaultSignalHandler.cpp"
+#include "wasm/WasmFormat.cpp"
+#include "wasm/WasmIndexOrName.cpp"
+#include "wasm/WasmInstance.cpp"
+#include "wasm/WasmMachineThreads.cpp"
+#include "wasm/WasmMemory.cpp"
+#include "wasm/WasmMemoryInformation.cpp"

@@ -1,0 +1,8 @@
+#include "wasm/WasmOperations.cpp"
+#include "wasm/WasmPageCount.cpp"
+#include "wasm/WasmPlan.cpp"
+#include "wasm/WasmSectionParser.cpp"
+#include "wasm/WasmSignature.cpp"
+#include "wasm/WasmStreamingParser.cpp"
+#include "wasm/WasmTable.cpp"
+#include "wasm/WasmThunks.cpp"

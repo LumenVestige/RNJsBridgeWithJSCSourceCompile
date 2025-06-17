@@ -1,0 +1,30 @@
+
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/webkit/Source/cmake" ${CMAKE_MODULE_PATH})
+set(JAVASCRIPTCORE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/webkit/Source/JavaScriptCore)
+set(USE_SYSTEM_MALLOC OFF CACHE BOOL "Disable system malloc")
+set(WEBKIT_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/webkit")
+set(PORT "JSCOnly" CACHE STRING "Use JSCOnly port")
+set(JavaScriptCore_LIBRARY_TYPE SHARED)
+message("ANDROID_ABI==>${ANDROID_ABI}")
+if (ANDROID_ABI STREQUAL "armeabi-v7a")
+    set(OFFLINE_ASM_BACKEND armv7 CACHE STRING "" FORCE)
+elseif (ANDROID_ABI STREQUAL "arm64-v8a")
+    set(OFFLINE_ASM_BACKEND arm64 CACHE STRING "" FORCE)
+elseif (ANDROID_ABI STREQUAL "x86")
+    set(OFFLINE_ASM_BACKEND x86 CACHE STRING "" FORCE)
+elseif (ANDROID_ABI STREQUAL "x86_64")
+    set(OFFLINE_ASM_BACKEND x86_64 CACHE STRING "" FORCE)
+else ()
+    message(FATAL_ERROR "Unsupported ABI: ${ANDROID_ABI}")
+endif ()
+
+
+include(webkit/Source/cmake/WebKitCommon.cmake)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}webkit/Source/WTF)
+add_definitions(-DUSE_EXPORT_MACROS=1)
+add_definitions(-DBUILDING_WTF)
+
+
+add_subdirectory(webkit/Source/WTF)
+add_subdirectory(webkit/Source/bmalloc)
+add_subdirectory(webkit/Source/JavaScriptCore)

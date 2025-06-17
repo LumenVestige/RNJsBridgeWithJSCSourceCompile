@@ -1,0 +1,8 @@
+#include "wasm/js/WebAssemblyCompileErrorConstructor.cpp"
+#include "wasm/js/WebAssemblyCompileErrorPrototype.cpp"
+#include "wasm/js/WebAssemblyFunction.cpp"
+#include "wasm/js/WebAssemblyFunctionBase.cpp"
+#include "wasm/js/WebAssemblyFunctionHeapCellType.cpp"
+#include "wasm/js/WebAssemblyInstanceConstructor.cpp"
+#include "wasm/js/WebAssemblyInstancePrototype.cpp"
+#include "wasm/js/WebAssemblyLinkErrorConstructor.cpp"

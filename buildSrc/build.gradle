@@ -1,0 +1,40 @@
+
+plugins {
+    id 'java-library'
+    id("org.jetbrains.kotlin.jvm") version "1.9.22"
+    id 'java-gradle-plugin'
+}
+
+repositories {
+    google()
+    gradlePluginPortal()
+}
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    }
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation 'org.ow2.asm:asm:9.5'
+    implementation 'org.ow2.asm:asm-commons:9.5'
+    implementation 'com.android.tools.build:gradle:8.2.0'
+}
+
+gradlePlugin {
+    plugins {
+        easyTrace {
+            id = 'com.aidaole.easytrace'
+            implementationClass = 'com.aidaole.easytrace.plugin.EasyTracePlugin'
+        }
+    }
+}
+

@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.aidaole.easytrace'
+}
+easyTrace {
+    // 指定包名, 可以指定多个以,分割. 包名下的所有方法都会被插桩, 插桩的方法会比较多
+     includePackages = ['com.sanyinchen','com.facebook']
+}
+android {
+    namespace 'com.sanyinchen.jsbridge'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.sanyinchen.jsbridge"
+        minSdk 29
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.4.3'
+    }
+//    packaging {
+//        resources {
+//            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+//        }
+//    }
+}
+
+dependencies {
+    implementation project(':js-bridge-lib')
+    implementation 'com.facebook.soloader:soloader:0.6.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    implementation 'androidx.activity:activity-compose:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+}
