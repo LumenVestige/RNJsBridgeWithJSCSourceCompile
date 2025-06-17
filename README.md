@@ -1,10 +1,13 @@
 ### 基于RN V0.6x版本JS-Bridge通讯框架，集成JSC以及ATrace源码编译
 #### 文件/目录清单： 
-+ js-bridge：JS层Bridge
-+ js-bridge-lib: Native层Bridge
++ [buildSrc](buildSrc)：Trace插桩插件（from https://github.com/aidaole/EasyTrace）
++ [js-bridge](js-bridge)：JS层Bridge
++ [js-bridge-lib](js-bridge-lib): Native层Bridge
   + [bridge](js-bridge-lib/src/main/cpp/bridge) BridgeCore
   + [jsc](js-bridge-lib/src/main/cpp/jsc) JSC（JavaScriptCore）源码
-#### Test：
+  + [trace](js-bridge-lib/src/main/cpp/trace) aTrace
++ [perfetto.sh](perfetto.sh) trace 执行脚本（sh ./perfetto.sh ）
+#### API Test：
 ```
 // test
 // async invoke NativeModule:TestSum
@@ -34,7 +37,11 @@ NativeModules.HelloCxxModule.foo((r) => {
 ```
 + 点击init初始化jsBridge以及加载js-bridge-bundle.js
 + 点击invoke js测试native调用js module
+#### Trace预览
+<img src="https://github.com/sanyinchen/jsbridge/blob/master/source/trace.png" alt="trace"  height="700">
 
+#### Demo预览
 <img src="https://github.com/sanyinchen/jsbridge/blob/master/source/demo.png" alt="demo"  height="700">
+
 
 
