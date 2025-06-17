@@ -38,10 +38,10 @@ NativeModules.HelloCxxModule.foo((r) => {
 + 点击init初始化jsBridge以及加载js-bridge-bundle.js
 + 点击invoke js测试native调用js module
 #### Trace预览
-<img src="https://github.com/LumenVestige/RNJsBridgeWithJSCSourceCompile/blob/master/source/trace.png" alt="trace"  height="700">
+<img src="source/trace.png" alt="trace"  height="700">
 
 #### Demo预览
-<img src="https://github.com/LumenVestige/RNJsBridgeWithJSCSourceCompile/blob/master/source/demo.png" alt="demo"  height="700">
+<img src="source/demo.png" alt="demo"  height="700">
 
 
 
