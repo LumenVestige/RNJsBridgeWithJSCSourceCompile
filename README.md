@@ -1,4 +1,11 @@
+
 ### 基于RN V0.6x版本JS-Bridge通讯框架，集成JSC以及ATrace源码编译
+
+<p>
+  <strong>👀 :</strong>
+  <img src="https://profile-counter.glitch.me/LumenVestige.RNJsBridgeWithJSCSourceCompile/count.svg" alt="Visitor Count"  width="120"/>
+</p>
+
 #### 文件/目录清单： 
 + [buildSrc](buildSrc)：Trace插桩插件（from https://github.com/aidaole/EasyTrace）
 + [js-bridge](js-bridge)：JS层Bridge
