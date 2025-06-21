@@ -8,14 +8,14 @@
 
 
 #### 文件/目录清单： 
-+ [buildSrc](buildSrc)：Trace插桩插件（from https://github.com/aidaole/EasyTrace）
++ [buildSrc](buildSrc)：Trace插桩插件（from [EasyTrace](https://github.com/aidaole/EasyTrace))
 + [js-bridge](js-bridge)：JS层Bridge
 + [js-bridge-lib](js-bridge-lib): Native层Bridge
   + [bridge](js-bridge-lib/src/main/cpp/bridge) BridgeCore
   + [jsc](js-bridge-lib/src/main/cpp/jsc) JSC（JavaScriptCore）源码
   + [trace](js-bridge-lib/src/main/cpp/trace) aTrace
 + [perfetto.sh](perfetto.sh) trace 执行脚本（sh ./perfetto.sh ）
-+ icu buid from:[https://github.com/LumenVestige/android-jsc-icu-build](https://github.com/LumenVestige/android-jsc-icu-build)
++ icu buid from:[android-jsc-icu-build](https://github.com/LumenVestige/android-jsc-icu-build)
 #### API Test：
 ```
 // test
