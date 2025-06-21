@@ -15,6 +15,7 @@
   + [jsc](js-bridge-lib/src/main/cpp/jsc) JSC（JavaScriptCore）源码
   + [trace](js-bridge-lib/src/main/cpp/trace) aTrace
 + [perfetto.sh](perfetto.sh) trace 执行脚本（sh ./perfetto.sh ）
++ icu buid from:[https://github.com/LumenVestige/android-jsc-icu-build](https://github.com/LumenVestige/android-jsc-icu-build)
 #### API Test：
 ```
 // test
