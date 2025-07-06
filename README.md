@@ -1,8 +1,4 @@
 
-<p>
-  <strong>👀</strong>
-  <img src="https://profile-counter.glitch.me/LumenVestige.RNJsBridgeWithJSCSourceCompile/count.svg" alt="Visitor Count"  width="120"/>
-</p>
 
 ### 基于RN V0.6x版本JS-Bridge通讯框架，集成JSC以及ATrace源码编译
 
